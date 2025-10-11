@@ -1,0 +1,206 @@
+/* Custom styles for Music Streaming App Report */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+:root {
+    --primary-color: #1DB954;
+    --background-color: #121212;
+    --surface-color: #181818;
+    --card-color: #282828;
+    --text-primary: #FFFFFF;
+    --text-secondary: #b3b3b3;
+}
+
+.bg-primary { background-color: var(--primary-color); }
+.text-primary { color: var(--primary-color); }
+.bg-surface { background-color: var(--surface-color); }
+.bg-card { background-color: var(--card-color); }
+.text-secondary { color: var(--text-secondary); }
+
+.sidebar-link {
+    transition: all 0.2s ease-in-out;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+    background-color: var(--card-color);
+    color: var(--text-primary);
+    border-left-color: var(--primary-color);
+}
+
+.content-section h2 {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.placeholder-image {
+    border: 2px dashed #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    min-height: 300px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    font-weight: 600;
+}
+
+code {
+    background-color: #111;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #f06292;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--card-color);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .sidebar-link {
+        font-size: 0.9rem;
+        padding: 0.6rem !important;
+    }
+}
+
+/* Animation for content loading */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-section {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Notification animations */
+@keyframes slide-in {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+.animate-slide-in {
+    animation: slide-in 0.3s ease-out;
+}
+
+.animate-slide-out {
+    animation: slide-out 0.3s ease-in;
+}
+
+/* Download button styles */
+.inline-flex svg {
+    transition: transform 0.2s ease;
+}
+
+.inline-flex:hover svg {
+    transform: translateY(2px);
+}
+
+/* Broken image placeholder */
+.broken-image {
+    opacity: 0.5;
+    border: 2px dashed #666 !important;
+}
+
+/* Print styles */
+@media print {
+    .no-print,
+    aside,
+    nav,
+    button,
+    .back-to-top,
+    .custom-notification {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .bg-card,
+    .bg-surface {
+        background: white !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+    
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* Button group spacing */
+.flex.flex-wrap.gap-3 > * {
+    white-space: nowrap;
+}
+
+/* Hover effects for download buttons */
+a[download]:hover,
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(29, 185, 84, 0.3);
+}

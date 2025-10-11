@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Schema - Music Streaming App</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-background-color text-text-primary">
+
+    <!-- Back to main report button -->
+    <div class="fixed top-4 left-4 z-50">
+        <a href="index.html" class="inline-flex items-center bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition-colors">
+            ← Quay lại báo cáo chính
+        </a>
+    </div>
+
+    <div class="container mx-auto p-6 md:p-10 max-w-7xl">
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-primary mb-4">Chi tiết Database Schema</h1>
+            <p class="text-xl text-secondary">Thiết kế cơ sở dữ liệu cho Music Streaming App</p>
+        </header>
+
+        <!-- Content from the database schema section -->
+        <div class="space-y-8">
+            <!-- Giải thích ký hiệu ERD -->
+            <div class="p-5 bg-card rounded-lg">
+                <h3 class="text-xl font-semibold mb-4 text-primary">📐 Ký hiệu trong ERD</h3>
+                <!-- ...existing ERD notation content... -->
+            </div>
+
+            <!-- Chi tiết các bảng -->
+            <div class="space-y-8">
+                <h2 class="text-2xl font-semibold mb-4 text-primary">📊 Chi tiết thiết kế các bảng</h2>
+                
+                <!-- Table 1: User -->
+                <!-- ...copy all table details from the original file... -->
+                
+                <!-- Monitoring section -->
+                <div class="p-6 bg-card rounded-lg border-l-4 border-green-500">
+                    <h4 class="font-bold text-lg mb-3 text-green-400">📈 Monitoring & Maintenance</h4>
+                    <ul class="list-disc list-inside text-secondary text-sm space-y-1 ml-4">
+                        <li>Query performance monitoring với slow query log</li>
+                        <li>Database health checks định kỳ</li>
+                        <li>Alert system cho disk space và connection pool</li>
+                        <li>Regular vacuum và analyze (PostgreSQL)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
